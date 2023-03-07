@@ -1,4 +1,4 @@
-# Email_Spam_Classifier-Handson_ml
+# Spam Email Classifier
 Classifying Email as spam or ham
 
 ## About
