@@ -84,10 +84,10 @@ def main():
         prediction = model.predict(transformed_text)
             
         if prediction == 0:
-            st.write('This email is not spam.')
+            return st.success('This email is not spam.')
 
         else:
-            st.write('This email is spam.')
+            return st.error('This email is spam.')
 
 if __name__ == '__main__':
     main()
