@@ -9,7 +9,7 @@ import numpy as np
 import pandas as pd
 from sklearn.pipeline import Pipeline
 
-model = joblib.load(open('C:/Users/ACER/Machine_Learning_Env/Spam_Classifier/new_model.joblib', 'rb'))
+model = joblib.load(open('new_model.joblib', 'rb'))
 with open('reference_words.joblib', 'rb') as f:
     ref_words = joblib.load(f)
 
