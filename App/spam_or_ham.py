@@ -9,8 +9,8 @@ import numpy as np
 import pandas as pd
 from sklearn.pipeline import Pipeline
 
-model = joblib.load(open('new_model.joblib', 'rb'))
-with open('reference_words.joblib', 'rb') as f:
+model = joblib.load(open('App\new_model.joblib', 'rb'))
+with open('App\reference_words.joblib', 'rb') as f:
     ref_words = joblib.load(f)
 
 def stemming_word(text, lower_case=True):
