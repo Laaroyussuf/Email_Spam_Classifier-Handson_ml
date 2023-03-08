@@ -1,7 +1,7 @@
 import streamlit as st
 import re
 from collections import Counter
-import pickle
+import joblib
 from sklearn.base import BaseEstimator, TransformerMixin
 import nltk #nltk --> Natural Language Toolkit
 stemmer = nltk.PorterStemmer() # Stemming each word i.e., getting the root for each word in an email
@@ -9,9 +9,9 @@ import numpy as np
 import pandas as pd
 from sklearn.pipeline import Pipeline
 
-model = pickle.load(open('C:/Users/ACER/Machine_Learning_Env/Spam_Classifier/new_model.pkl', 'rb'))
+model = joblib.load(open('C:/Users/ACER/Machine_Learning_Env/Spam_Classifier/new_model.pkl', 'rb'))
 with open('reference_words.pkl', 'rb') as f:
-    ref_words = pickle.load(f)
+    ref_words = joblib.load(f)
 
 def stemming_word(text, lower_case=True):
     if lower_case:
